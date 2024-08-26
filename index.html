@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/materialize-css/dist/css/materialize.min.css"
+      media="screen,projection"
+    />
+    <script src="index.js"></script>
+    <title>Генератор паролей</title>
+  </head>
+
+  <body>
+    <form class="container">
+        <div class="wrapper">
+            <div class="checkboxes">
+                <p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="numbersCb"
+                      class="filled-in"
+                      checked="checked"
+                    />
+                    <span>Цифры (0 - 9)</span>
+                  </label>
+                </p>
+      
+                <p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="latinLowerCb"
+                      class="filled-in"
+                      checked="checked"
+                    />
+                    <span>Латинские строчные буквы (a - z)</span>
+                  </label>
+                </p>
+      
+                <p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="latinUpperCb"
+                      class="filled-in"
+                      checked="checked"
+                    />
+                    <span>Латинские прописные буквы (A - Z)</span>
+                  </label>
+                </p>
+      
+                <p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="russianLowerCb"
+                      class="filled-in"
+                      checked="checked"
+                    />
+                    <span>Русские строчные буквы (а - я)</span>
+                  </label>
+                </p>
+      
+                <p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="russianUpperCb"
+                      class="filled-in"
+                      checked="checked"
+                    />
+                    <span>Русские прописные буквы (А - Я)</span>
+                  </label>
+                </p>
+      
+                <p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="specialSymbolsCb"
+                      class="filled-in"
+                      checked="checked"
+                    />
+                    <span>Специальные символы</span>
+                  </label>
+                </p>
+            </div>
+      
+             <div class="inputs">
+              <div class="input-field col s6">
+                  <input
+                    name="passwordSymbolCount"
+                    type="number"
+                    class="validate"
+                  />
+                  <label for="passwordSymbolCount">Длина пароля</label>
+                </div>
+                <div class="input-field col s6">
+                  <input name="passwordsCount" type="number" class="validate" />
+                  <label for="passwordsCount">Число паролей</label>
+                </div>
+              </div>  
+             </div>
+      
+        </div>
+
+       <div class="buttons">
+        <button
+        class="waves-effect waves-light btn"
+        type="button"
+        onclick="toGeneratePassword(this.form)"
+      >
+        Генерация
+      </button>
+      <button
+        class="waves-effect waves-light btn"
+        type="button"
+        onclick="toCopyPasswords(this.form)"
+      >
+        Скопировать
+      </button>
+       </div>
+
+      <textarea class="textarea"
+        name="textArea"
+        cols="30"
+        rows="10"
+        placeholder="Тут будут пароли"
+        disabled
+      ></textarea>
+    </form>
+    <script src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  </body>
+</html>

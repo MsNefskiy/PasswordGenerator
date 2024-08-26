@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.label-text {
+    font-size: 1px;
+}
+
+textarea {
+    width: 10px;
+}
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textarea {
+    margin-top: 20px;
+    max-width: 50rem;
+    min-height: 25rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
